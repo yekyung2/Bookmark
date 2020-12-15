@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django Bookmark List</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="contens">
-        <h1> Bookmark list</h1>
-        <ul>
-            {% for bookmark in object_list %}
-        </ul>
+      <h1>Bookmark list</h1>
+      <ul>
+        {% for bookmark in object_list %}
+        <li><a href="{% url 'detail' bookmark.id %}">{{bookmark}} </a></li>
+        {% endfor %}
+      </ul>
     </div>
-</body>
-
+  </body>
 </html>
