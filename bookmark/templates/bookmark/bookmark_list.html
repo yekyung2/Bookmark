@@ -8,10 +8,12 @@
 
   <body>
     <div id="contens">
-      <h1>Bookmark list</h1>
+      <h1>Bookmark List</h1>
+      <h1>{{ bookmark.title}}</h1>
+
       <ul>
         {% for bookmark in object_list %}
-        <li><a href="{% url 'detail' bookmark.id %}">{{bookmark}} </a></li>
+        <li>URL : <a href="{{bookmark.url}}">{{bookmark.url}}</a></li>
         {% endfor %}
       </ul>
     </div>
